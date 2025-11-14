@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Prodotto from "../components/Prodotto";
 
 export default function Prodotti({ urlProducts }) {
   const [products, setProducts] = useState([]);
@@ -18,16 +19,7 @@ export default function Prodotti({ urlProducts }) {
 
   return (
     <div className="container my-4">
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        products.map((product) => (
-          <div key={product.id}>
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-          </div>
-        ))
-      )}
+      {loading ? <p>Loading...</p> : <Prodotto products={products} />}
     </div>
   );
 }
