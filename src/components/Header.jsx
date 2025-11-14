@@ -1,9 +1,9 @@
-import Navbar from "./NavBar";
+import Navbar from "./Navbar";
 
-export default function Header() {
+export default function Header({ cart }) {
   return (
     <>
-      <Navbar />
+      <Navbar cart={cart} />
     </>
   );
 }
