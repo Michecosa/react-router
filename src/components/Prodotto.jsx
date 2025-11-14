@@ -27,10 +27,16 @@ export default function Prodotti({ products }) {
                   {product.category}
                 </p>
                 <p
-                  className="text-warning fw-bold mb-1 text-end"
+                  className="text-body-tertiary mb-2"
                   style={{ fontSize: "0.85rem" }}
                 >
-                  <i className="bi bi-star-fill"></i> {product.rating.rate}
+                  <span
+                    className="text-warning fw-bold mb-1 text-end me-2"
+                    style={{ fontSize: "0.85rem" }}
+                  >
+                    <i className="bi bi-star-fill"></i> {product.rating.rate}
+                  </span>
+                  ({product.rating.count})
                 </p>
               </div>
 
