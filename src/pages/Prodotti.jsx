@@ -16,5 +16,18 @@ export default function Prodotti({ urlProducts }) {
       .catch((err) => console.log(err));
   }, [urlProducts]);
 
-  return <></>;
+  return (
+    <div className="container my-4">
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        products.map((product) => (
+          <div key={product.id}>
+            <h3>{product.name}</h3>
+            <p>{product.description}</p>
+          </div>
+        ))
+      )}
+    </div>
+  );
 }
