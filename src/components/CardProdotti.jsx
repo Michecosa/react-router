@@ -1,10 +1,10 @@
-export default function CardProdotti({ products }) {
+export default function CardProdotti({ products, addToCart }) {
   return (
     <div className="row g-4">
       {products.map((product) => (
         <div
           key={product.id}
-          className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+          className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 position-relative"
         >
           <div className="card h-100 shadow-sm">
             <div style={{ width: "100%", height: "200px", padding: "1.1rem" }}>
@@ -21,6 +21,12 @@ export default function CardProdotti({ products }) {
             </div>
 
             <div className="card-body d-flex flex-column">
+              <span
+                className="badge text-bg-danger rounded-5 p-2 position-absolute"
+                style={{ right: "0.5rem", top: "0.5rem" }}
+              >
+                Limited time deal!
+              </span>
               <h6 className="card-title fw-bold mb-1">{product.title}</h6>
               <div className="d-flex justify-content-between">
                 <p className="text-muted mb-2" style={{ fontSize: "0.75rem" }}>
@@ -47,10 +53,16 @@ export default function CardProdotti({ products }) {
               >
                 {product.description}
               </p>
-              <div>
-                <span className="badge text-bg-success fs-6">
+              <div className="d-flex justify-content-between align-items-center mt-3">
+                <span className="text-danger fs-4 fw-bolder">
                   &euro;{product.price}
                 </span>
+                <button
+                  className="btn btn-primary"
+                  onClick={() => addToCart(product)}
+                >
+                  <i className="bi bi-cart4"></i>
+                </button>
               </div>
             </div>
           </div>
