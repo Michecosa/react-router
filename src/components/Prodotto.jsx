@@ -20,7 +20,10 @@ export default function Prodotti({ products }) {
             <div className="card-body">
               <h5 className="card-title">{product.title}</h5>
               <p className="card-text">
-                {product.category} - &euro;{product.price}
+                {product.category} -{" "}
+                <span className="badge text-bg-success">
+                  &euro;{product.price}
+                </span>
               </p>
               <p className="card-text">{product.description}</p>
             </div>
