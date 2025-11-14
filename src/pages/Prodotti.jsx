@@ -10,7 +10,6 @@ export default function Prodotti({ urlProducts }) {
     axios
       .get(urlProducts)
       .then((response) => {
-        console.log(response.data);
         setProducts(response.data);
         setLoading(false);
       })
