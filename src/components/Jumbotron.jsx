@@ -12,7 +12,7 @@ export default function Jumbotron() {
       <div className="overlay"></div>
 
       <div className="position-relative h-100 d-flex justify-content-center align-items-center">
-        <h1 className="display-4">Benvenuto nel nostro store</h1>
+        <h1 className="display-4">Welcome to our store</h1>
       </div>
     </div>
   );

@@ -28,12 +28,12 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/prodotti">
-                Prodotti
+                Products
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/chisiamo">
-                Chi siamo
+                About us
               </NavLink>
             </li>
           </ul>
