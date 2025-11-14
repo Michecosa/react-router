@@ -45,20 +45,23 @@ export default function Prodotti({ urlProducts }) {
         <p>Loading...</p>
       ) : (
         <div>
-          <h2 className="mb-4">I nostri prodotti</h2>
-          {categories.map((category, index) => {
-            return (
-              <button
-                key={index}
-                className={`btn btn-secondary me-2 mb-5 ${
-                  index === selected && "btn-info"
-                }`}
-                onClick={() => setSelected(index)}
-              >
-                {category}
-              </button>
-            );
-          })}
+          <h2 className="mb-3">Our Products</h2>
+          <div className="d-flex align-align-items-baseline mb-4">
+            <p className="mb-0 d-flex align-items-center me-3">Filter by:</p>
+            {categories.map((category, index) => {
+              return (
+                <button
+                  key={index}
+                  className={`btn btn-secondary me-2 ${
+                    index === selected && "btn-info"
+                  }`}
+                  onClick={() => setSelected(index)}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
 
           <CardProdotti products={filterProducts} />
         </div>
