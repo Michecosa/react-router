@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/store.png";
 
-export default function Navbar() {
+export default function Navbar({ cart }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
@@ -37,17 +37,19 @@ export default function Navbar() {
               </NavLink>
             </li>
           </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-primary" type="submit">
-              Search
-            </button>
-          </form>
+          <div className="d-flex align-items-center position-relative">
+            <NavLink to="/carrello" className="fw-bold">
+              <i className="bi bi-cart4 fs-4"></i>
+              {cart.length > 0 && (
+                <span
+                  class="position-absolute translate-middle badge rounded-pill bg-danger"
+                  style={{ top: "0.2rem", right: "-1.6rem" }}
+                >
+                  {cart.length}
+                </span>
+              )}
+            </NavLink>
+          </div>
         </div>
       </div>
     </nav>
