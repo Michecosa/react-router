@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import CardProdotti from "../components/CardProdotti";
 
-export default function Prodotti({ urlProducts }) {
+export default function Prodotti({ urlProducts, addToCart }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState(0);
@@ -63,7 +63,7 @@ export default function Prodotti({ urlProducts }) {
             })}
           </div>
 
-          <CardProdotti products={filterProducts} />
+          <CardProdotti products={filterProducts} addToCart={addToCart} />
         </div>
       )}
     </div>
