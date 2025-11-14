@@ -1,9 +1,11 @@
+import background from "../assets/landscape.jpg";
+
 export default function Jumbotron() {
   return (
     <div
       className="jumbotron text-white shadow p-5 position-relative"
       style={{
-        backgroundImage: "url(https://picsum.photos/1920/400)",
+        backgroundImage: `url(${background})`,
         height: "400px",
       }}
     >
