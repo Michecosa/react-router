@@ -1,4 +1,4 @@
-export default function Prodotti({ products }) {
+export default function CardProdotti({ products }) {
   return (
     <div className="row g-4">
       {products.map((product) => (

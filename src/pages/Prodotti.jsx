@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Prodotto from "../components/Prodotto";
+import CardProdotti from "../components/CardProdotti";
 
 export default function Prodotti({ urlProducts }) {
   const [products, setProducts] = useState([]);
@@ -23,7 +23,7 @@ export default function Prodotti({ urlProducts }) {
       ) : (
         <div>
           <h2 className="mb-4">I nostri prodotti</h2>
-          <Prodotto products={products} />
+          <CardProdotti products={products} />
         </div>
       )}
     </div>
