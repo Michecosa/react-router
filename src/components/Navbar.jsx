@@ -43,7 +43,7 @@ export default function Navbar({ cart }) {
               {cart.length > 0 && (
                 <span
                   class="position-absolute translate-middle badge rounded-pill bg-danger"
-                  style={{ top: "0.2rem", right: "-1.6rem" }}
+                  style={{ top: "0.2rem", left: "1.6rem" }}
                 >
                   {cart.length}
                 </span>
