@@ -3,7 +3,7 @@ import logo from "../assets/store.png";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
           <img src={logo} alt="Logo" width="24" height="auto" />

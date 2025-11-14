@@ -7,7 +7,7 @@ export default function DefaultLayout() {
     <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
       <Header />
 
-      <main className="flex-grow-1 container py-4">
+      <main className="flex-grow-1 pb-2">
         <Outlet />
       </main>
 
