@@ -18,7 +18,14 @@ export default function Prodotti({ urlProducts }) {
 
   return (
     <div className="container my-4">
-      {loading ? <p>Loading...</p> : <Prodotto products={products} />}
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div>
+          <h2 className="mb-4">I nostri prodotti</h2>
+          <Prodotto products={products} />
+        </div>
+      )}
     </div>
   );
 }
