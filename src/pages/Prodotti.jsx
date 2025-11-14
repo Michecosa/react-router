@@ -46,7 +46,7 @@ export default function Prodotti({ urlProducts }) {
       ) : (
         <div>
           <h2 className="mb-3">Our Products</h2>
-          <div className="d-flex align-align-items-baseline mb-4">
+          <div className="d-flex align-align-items-baseline mb-5">
             <p className="mb-0 d-flex align-items-center me-3">Filter by:</p>
             {categories.map((category, index) => {
               return (
