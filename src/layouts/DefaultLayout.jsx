@@ -4,10 +4,10 @@ import Footer from "../components/Footer";
 
 export default function DefaultLayout() {
   return (
-    <div>
+    <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
       <Header />
 
-      <main>
+      <main className="flex-grow-1 container py-4">
         <Outlet />
       </main>
 
