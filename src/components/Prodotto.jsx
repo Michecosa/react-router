@@ -21,18 +21,19 @@ export default function Prodotti({ products }) {
             </div>
 
             <div className="card-body d-flex flex-column">
-              <h6
-                className="card-title fw-bold mb-1"
-                style={{ fontSize: "0.9rem", flexShrink: 0 }}
-              >
-                {product.title}
-              </h6>
-              <p
-                className="text-muted mb-2"
-                style={{ fontSize: "0.75rem", flexShrink: 0 }}
-              >
-                {product.category}
-              </p>
+              <h6 className="card-title fw-bold mb-1">{product.title}</h6>
+              <div className="d-flex justify-content-between">
+                <p className="text-muted mb-2" style={{ fontSize: "0.75rem" }}>
+                  {product.category}
+                </p>
+                <p
+                  className="text-warning fw-bold mb-1 text-end"
+                  style={{ fontSize: "0.85rem" }}
+                >
+                  <i className="bi bi-star-fill"></i> {product.rating.rate}
+                </p>
+              </div>
+
               <p
                 className="card-text text-truncate"
                 style={{ fontSize: "0.8rem", flexGrow: 1 }}
