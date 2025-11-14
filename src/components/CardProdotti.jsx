@@ -55,7 +55,7 @@ export default function CardProdotti({ products, addToCart }) {
               </p>
               <div className="d-flex justify-content-between align-items-center mt-3">
                 <span className="text-danger fs-4 fw-bolder">
-                  &euro;{product.price}
+                  &euro;{product.price.toFixed(2)}
                 </span>
                 <button
                   className="btn btn-primary"
