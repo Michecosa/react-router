@@ -52,8 +52,8 @@ export default function Prodotti({ urlProducts }) {
               return (
                 <button
                   key={index}
-                  className={`btn btn-secondary me-2 ${
-                    index === selected && "btn-info"
+                  className={`btn me-2 ${
+                    index === selected ? "btn-primary" : "btn-outline-secondary"
                   }`}
                   onClick={() => setSelected(index)}
                 >
