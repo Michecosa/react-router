@@ -4,7 +4,7 @@ import Carrello from "./pages/Carrello";
 import Home from "./pages/Homepage";
 import Prodotti from "./pages/Prodotti";
 import ChiSiamo from "./pages/ChiSiamo";
-import SingleProduct from "./components/SingleProduct";
+import SingleProduct from "./pages/SingleProduct";
 import NotFound from "./pages/NotFound";
 import { useState } from "react";
 
