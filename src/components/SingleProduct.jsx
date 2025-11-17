@@ -13,6 +13,9 @@ export default function SingleProduct({ urlProducts, addToCart }) {
     axios
       .get(`${urlProducts}/${id}`)
       .then((res) => {
+        if (!res.data || !res.data.id) {
+          return navigate("/notfound");
+        }
         setProduct(res.data);
         setLoading(false);
       })
