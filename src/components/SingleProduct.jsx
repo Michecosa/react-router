@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function SingleProduct({ urlProducts }) {
+export default function SingleProduct({ urlProducts, addToCart }) {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -62,6 +62,12 @@ export default function SingleProduct({ urlProducts }) {
               <p className="fw-semibold mt-4 mb-0">Product details:</p>
               <p>{product.description}</p>
             </div>
+            <button
+              className="btn btn-primary mt-3 me-3"
+              onClick={() => addToCart(product)}
+            >
+              <i className="bi bi-cart4"></i>
+            </button>
             <button
               className="btn btn-outline-primary mt-3"
               onClick={() => navigate(-1)}

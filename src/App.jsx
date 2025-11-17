@@ -36,7 +36,9 @@ export default function App() {
           <Route path="/chisiamo" element={<ChiSiamo />} />
           <Route
             path="/prodotti/:id"
-            element={<SingleProduct urlProducts={endpoint} />}
+            element={
+              <SingleProduct urlProducts={endpoint} addToCart={addToCart} />
+            }
           />
         </Route>
       </Routes>
