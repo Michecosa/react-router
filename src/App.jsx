@@ -34,7 +34,10 @@ export default function App() {
             element={<Carrello cart={cart} removeFromCart={removeFromCart} />}
           />
           <Route path="/chisiamo" element={<ChiSiamo />} />
-          <Route path="/prodotti/:id" element={<SingleProduct />} />
+          <Route
+            path="/prodotti/:id"
+            element={<SingleProduct urlProducts={endpoint} />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
