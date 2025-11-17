@@ -16,7 +16,7 @@ export default function SingleProduct({ urlProducts, addToCart }) {
         setProduct(res.data);
         setLoading(false);
       })
-      .catch(() => navigate("/prodotti"));
+      .catch(() => navigate("/notfound"));
   }, [id, urlProducts, navigate]);
 
   return (

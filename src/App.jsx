@@ -5,6 +5,7 @@ import Home from "./pages/Homepage";
 import Prodotti from "./pages/Prodotti";
 import ChiSiamo from "./pages/ChiSiamo";
 import SingleProduct from "./components/SingleProduct";
+import NotFound from "./pages/NotFound";
 import { useState } from "react";
 
 const endpoint = "https://fakestoreapi.com/products";
@@ -40,6 +41,7 @@ export default function App() {
               <SingleProduct urlProducts={endpoint} addToCart={addToCart} />
             }
           />
+          <Route path="/notfound" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
