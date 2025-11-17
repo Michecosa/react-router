@@ -46,13 +46,15 @@ export default function Prodotti({ urlProducts, addToCart }) {
       ) : (
         <div>
           <h2 className="mb-3">Our Products</h2>
-          <div className="d-flex align-align-items-baseline mb-5">
-            <p className="mb-0 d-flex align-items-center me-3">Filter by:</p>
+          <div className="d-flex align-align-items-baseline flex-wrap mb-5">
+            <p className="mb-0 d-flex align-items-center me-3 mb-1">
+              Filter by:
+            </p>
             {categories.map((category, index) => {
               return (
                 <button
                   key={index}
-                  className={`btn me-2 ${
+                  className={`btn me-2 mb-1 ${
                     index === selected ? "btn-primary" : "btn-outline-secondary"
                   }`}
                   onClick={() => setSelected(index)}
