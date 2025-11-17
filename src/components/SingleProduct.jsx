@@ -50,13 +50,13 @@ export default function SingleProduct({ urlProducts, addToCart }) {
                   className="text-warning fw-bold mb-1 text-end me-2"
                   style={{ fontSize: "0.85rem" }}
                 >
-                  <i className="bi bi-star-fill"></i> {product.rating.rate}
+                  <i className="bi bi-star-fill"></i> {product.rating?.rate}
                 </span>
-                ({product.rating.count})
+                ({product.rating?.count})
               </p>
             </div>
             <h4 className="text-success fw-bold mb-3">
-              €{product.price.toFixed(2)}
+              €{product.price?.toFixed(2)}
             </h4>
             <div style={{ maxWidth: "600px" }}>
               <p className="fw-semibold mt-4 mb-0">Product details:</p>
