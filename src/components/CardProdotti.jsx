@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function CardProdotti({ products, addToCart }) {
   return (
     <div className="row g-4">
@@ -8,16 +10,18 @@ export default function CardProdotti({ products, addToCart }) {
         >
           <div className="card h-100 shadow-sm">
             <div style={{ width: "100%", height: "200px", padding: "1.1rem" }}>
-              <img
-                src={product.image}
-                alt={product.title}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                  objectPosition: "center",
-                }}
-              />
+              <Link to={`/prodotti/${product.id}`}>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                    objectPosition: "center",
+                  }}
+                />
+              </Link>
             </div>
 
             <div className="card-body d-flex flex-column">
@@ -27,7 +31,12 @@ export default function CardProdotti({ products, addToCart }) {
               >
                 Limited time deal!
               </span>
-              <h6 className="card-title fw-bold mb-1">{product.title}</h6>
+              <Link
+                to={`/prodotti/${product.id}`}
+                className="text-decoration-none"
+              >
+                <h6 className="card-title fw-bold mb-1">{product.title}</h6>
+              </Link>
               <div className="d-flex justify-content-between">
                 <p className="text-muted mb-2" style={{ fontSize: "0.75rem" }}>
                   {product.category}

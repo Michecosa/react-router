@@ -4,6 +4,7 @@ import Carrello from "./pages/Carrello";
 import Home from "./pages/Homepage";
 import Prodotti from "./pages/Prodotti";
 import ChiSiamo from "./pages/ChiSiamo";
+import SingleProduct from "./components/SingleProduct";
 import { useState } from "react";
 
 const endpoint = "https://fakestoreapi.com/products";
@@ -33,6 +34,7 @@ export default function App() {
             element={<Carrello cart={cart} removeFromCart={removeFromCart} />}
           />
           <Route path="/chisiamo" element={<ChiSiamo />} />
+          <Route path="/prodotti/:id" element={<SingleProduct />} />
         </Route>
       </Routes>
     </BrowserRouter>
