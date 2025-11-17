@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
+import Carrello from "./pages/Carrello";
 import Home from "./pages/Homepage";
 import Prodotti from "./pages/Prodotti";
 import ChiSiamo from "./pages/ChiSiamo";
@@ -14,6 +15,10 @@ export default function App() {
     setCart((prev) => [...prev, product]);
   }
 
+  function removeFromCart(indexToRemove) {
+    setCart((prev) => prev.filter((el, index) => index !== indexToRemove));
+  }
+
   return (
     <BrowserRouter>
       <Routes>
@@ -22,6 +27,10 @@ export default function App() {
           <Route
             path="/prodotti"
             element={<Prodotti urlProducts={endpoint} addToCart={addToCart} />}
+          />
+          <Route
+            path="/carrello"
+            element={<Carrello cart={cart} removeFromCart={removeFromCart} />}
           />
           <Route path="/chisiamo" element={<ChiSiamo />} />
         </Route>
